@@ -13,5 +13,5 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --severity-threshold=high --maven-aggregate-project
+          args: --severity-threshold=high --all-projects
  
