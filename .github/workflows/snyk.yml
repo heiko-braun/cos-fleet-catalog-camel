@@ -2,8 +2,6 @@ name: CVE Scan
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main","snyk" ]
 jobs:
   security:
     runs-on: ubuntu-latest
@@ -15,4 +13,5 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --severity-threshold=high --maven-aggregate-project 
+          args: --severity-threshold=high --maven-aggregate-project
+ 
